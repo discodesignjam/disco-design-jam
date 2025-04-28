@@ -1,5 +1,4 @@
 /* Universal CSS */
-
 /* Nav Bar & Background */
 body {
   background-color: #ebf5f5;
@@ -132,38 +131,13 @@ body {
   top: 0.625em;
 }
 
-/* Sub Navigation Bar */
-#page-desc ul {
-  display: flex;
-  list-style-type: none;
-  gap: 1.25em;
-  padding: 3.75em 2.5em;
-  max-width: 112.5em;
-  margin: 0 auto;
-  font-weight: 900;
-  justify-content: center;
-  border: 0.3125em;
-  border-color: #b04022;
-}
-
-#page-desc p {
-  padding: 1.875em 1.25em;
-  max-width: 75em;
-  margin: 0 auto;
-}
-
-#page-desc h3:hover {
-  transition: 0.3s ease;
-  color: #b04022;
-}
-
 /* TEXT */
 h1 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 4.375em;
   font-weight: normal;
-  margin-bottom: 0.3125em;
+  margin-bottom: 0.313em;
   color: #072a36;
 }
 
@@ -213,7 +187,7 @@ a {
 
 .page-description {
   padding: 3.75em 2.5em;
-  max-width: 112.5em;
+  max-width: 75em;
   margin: 0 auto;
 }
 
@@ -221,14 +195,89 @@ a {
   color: #b04022;
 }
 
-#ship-cards,
-#persona-cards,
+#manual,
+#workshop,
+#persona-deck,
 #ship-deck,
-#persona-highlights {
+#pamphlets,
+.pamphlets-downloads {
   gap: 0.625em;
   padding: 3.75em 2.5em;
   max-width: 60em;
   margin: 0 auto;
+}
+
+#manual,
+#persona-deck {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 3.75em 2.5em;
+  max-width: 60em;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+#workshop,
+#pamphlets {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2.5em;
+  align-items: flex-start;
+  padding: 3.75em 2.5em;
+  max-width: 60em;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.manual-text,
+.workshop-text,
+.persona-text,
+.pamphlets-text {
+  flex: 1;
+  min-width: 18.75em;
+}
+
+.workshop-image,
+.pamphlets-image {
+  flex: 1;
+  min-width: 18.75em;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2.5em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.manual-image,
+.persona-image {
+  flex: 1;
+  min-width: 18.75em;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.manual-image img,
+.workshop-image img,
+.persona-image img,
+.pamphlets-image img {
+  width: 100%;
+  max-width: 31.25em;
+  border-radius: 1.875em;
+}
+
+/* Sub Navigation Bar */
+#sub-nav-bar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1.25em;
+  padding: 3.75em 2.5em;
+  max-width: 75em;
+  margin: 0 auto;
+  font-weight: 900;
 }
 
 /* Buttons */
@@ -238,6 +287,7 @@ a {
   justify-content: center;
   gap: 0.625em;
   margin-top: 0.625em;
+  padding-bottom: 3.125em;
 }
 
 .buttons button {
@@ -247,7 +297,6 @@ a {
   border: none;
   border-radius: 1.875em;
   padding: 0.625em 0.938em;
-  align-items: center;
   font-weight: bold;
 }
 
@@ -255,29 +304,6 @@ a {
   transition: 0.3s ease;
   background-color: #072a36;
   cursor: pointer;
-}
-
-/* IMAGES */
-#ship-images-container,
-#crew-images-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.875em;
-  padding: 1.25em;
-  justify-items: center;
-}
-
-.participant,
-.ship {
-  text-align: center;
-  max-width: 25em;
-}
-
-.images {
-  width: 100%;
-  max-width: 25em;
-  height: auto;
-  border-radius: 1.875em;
 }
 
 /* FOOTER */

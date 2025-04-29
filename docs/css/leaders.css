@@ -12,6 +12,8 @@ body {
   color: #fff5e4;
   font-family: "Poppins", sans-serif;
   padding: 0.625em 1.875em;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-links {
@@ -90,7 +92,7 @@ body {
   background-color: #072a36;
   min-width: 11.25em;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  z-index: 999;
+  z-index: 1000;
   padding: 0.625em 0;
 }
 
@@ -208,7 +210,8 @@ a {
 }
 
 #manual,
-#persona-deck {
+#ship-blueprint,
+#pamphlets {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -219,7 +222,7 @@ a {
 }
 
 #workshop,
-#pamphlets {
+#persona-deck {
   display: flex;
   flex-direction: row-reverse;
   gap: 2.5em;
@@ -233,6 +236,7 @@ a {
 .manual-text,
 .workshop-text,
 .persona-text,
+.ship-blueprint-text,
 .pamphlets-text {
   flex: 1;
   min-width: 18.75em;
@@ -250,6 +254,7 @@ a {
 }
 
 .manual-image,
+.ship-blueprint-image,
 .persona-image {
   flex: 1;
   min-width: 18.75em;
@@ -263,6 +268,7 @@ a {
 .manual-image img,
 .workshop-image img,
 .persona-image img,
+.ship-blueprint-image img,
 .pamphlets-image img {
   width: 100%;
   max-width: 31.25em;
@@ -313,4 +319,204 @@ a {
   max-width: 75em;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* NAVIGATION */
+  #main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .disco-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  #nav-logo {
+    width: 4em;
+    height: 4em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  /* SUB NAV */
+  #sub-nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+    gap: 0.75em;
+  }
+
+  /* MAIN CONTENT SECTIONS */
+  #manual,
+  #persona-deck,
+  #ship-deck,
+  #ship-blueprint,
+  #workshop,
+  #pamphlets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .manual-image,
+  .persona-image,
+  .ship-blueprint-image,
+  .workshop-image,
+  .pamphlets-image {
+    justify-content: center;
+  }
+
+  .manual-image img,
+  .ship-blueprint-image img,
+  .persona-image img,
+  .workshop-image img,
+  .pamphlets-image img {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  #header-h2 {
+    font-size: 1.5em;
+  }
+
+  .page-break {
+    height: 6.25em;
+  }
+
+  #disco-logo {
+    height: 6.25em;
+  }
+}
+
+/* Responsive Web Design */
+/* Mobile devices */
+@media (max-width: 768px) {
+  #main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625em 1em;
+  }
+
+  .disco-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  #nav-logo {
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  .disco-title p {
+    font-size: 1.25em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-content {
+    position: static; 
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff5e4;
+    cursor: pointer;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #main-nav {
+    padding: 1em;
+  }
+
+  .nav-links {
+    gap: 1.25em;
+  }
+}
+
+/* Menu Styling */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff5e4;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 768px) {
+ #main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625em 1em;
+  }
+
+  .disco-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex: 1;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff5e4;
+    cursor: pointer;
+    align-self: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    order: 3;
+    gap: 1em;
+    margin-top: 1em;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .nav-links.active {
+    max-height: 31.25em;
+    opacity: 1;
+    display: flex;
+  }
 }

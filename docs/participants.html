@@ -28,6 +28,10 @@
         <a href="./index.html"><img src="./assets/DISCO-Logo.png" alt="Our logo: a teal UFO emitting a beam. The top dome of the UFO looks like a disco ball, with sparkles surrounding it." id="nav-logo"></a>
         <p><a href="./index.html"><strong>D.I.S.C.O.</strong></a></p>
       </div>
+
+      <!-- Hamburger Menu for Tablets and Mobile Devices -->
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+
       <ul class="nav-links">
         <li><a href="./index.html">Home</a></li> 
         <li class="dropdown">
@@ -213,5 +217,13 @@
         <p>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" class="link-to-page">CC BY-NC-ND 4.0 (Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International);</a> attribution should be credited to: “Co-creators Lynn Priestley and Jessica FitzPatrick with the DISCO team” and hyperlinked to the DISCO toolkit credits page. If DISCO toolkit images have additional or alternative copyright information, such as  if they are used under the practice of Fair Use via Section 107 of U.S. Copyright Law, that information is listed alongside the specific content.</p>
       </div>
     </main>  
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
   </body>
 </html>

@@ -12,6 +12,8 @@ body {
   color: #fff5e4;
   font-family: "Poppins", sans-serif;
   padding: 0.625em 1.875em;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-links {
@@ -90,7 +92,7 @@ body {
   background-color: #072a36;
   min-width: 11.25em;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  z-index: 999;
+  z-index: 1000;
   padding: 0.625em 0;
 }
 
@@ -386,14 +388,50 @@ a {
 /* Mobile devices */
 @media (max-width: 768px) {
   #main-nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625em 1em;
   }
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 1em;
+  .disco-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  #nav-logo {
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  .disco-title p {
+    font-size: 1.25em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-content {
+    position: static; 
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff5e4;
+    cursor: pointer;
+    align-self: center;
+    padding: 0;
     margin: 0;
   }
 
@@ -466,23 +504,45 @@ a {
 }
 
 @media (max-width: 768px) {
+ #main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625em 1em;
+  }
+
+  .disco-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex: 1;
+  }
+
   #menu-toggle {
     display: block;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff5e4;
+    cursor: pointer;
+    align-self: center;
   }
 
   .nav-links {
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
+    order: 3;
     gap: 1em;
     margin-top: 1em;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
   }
 
   .nav-links.active {
-    max-height: none;
+    max-height: 31.25em;
     opacity: 1;
     display: flex;
   }

@@ -1,7 +1,7 @@
 # Welcome to the D.I.S.C.O. Design a Spaceship repository!
-Last updated: 4/29/2025
+Last updated: 4/30/2025
 
-## Website Link: https://discodesignjam.com/
+## [Go to the DISCO toolkit website](https://discodesignjam.com/) – If the embedded link is not working, our site URL is discodesignjam[dot]com.
 
 ### What is the D.I.S.C.O.?
 The DISCO is an acronym referencing the purpose of the design jam our toolkit aims to help people experience. DISCO stands for:

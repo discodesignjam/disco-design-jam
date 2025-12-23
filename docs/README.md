@@ -1,5 +1,5 @@
 # Welcome to the D.I.S.C.O. Design a Spaceship repository!
-Last updated: 10/24/2025
+Last updated: 12/23/2025
 
 ## [Go to the DISCO toolkit website](https://discodesignjam.com/) – If the embedded link is not working, our site URL is discodesignjam[dot]com.
 
